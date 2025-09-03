@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e4b6b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+#trabalhos {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imagem {
+    width: 200px;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+#sobre-nos {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+#creditos {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #1e4b6b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
