@@ -57,3 +57,19 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+.logo{
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+.cadastro{
+    width: 500px;
+}
+
+
+
