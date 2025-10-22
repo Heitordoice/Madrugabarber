@@ -118,5 +118,14 @@ body {
       box-shadow: 0 0 10px #f5c542;
     }
 
+.logo-madruga{
+  width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      transition: transform 0.3s, box-shadow 0.3s;
+      transform: scale(1.1);
+     
+}
+
     
     
