@@ -1,0 +1,17 @@
+form > *{
+    border: 0;
+    width: 400px;
+    height: 20px;
+    text-align: center;
+}
+
+main{
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+hgroup{
+    text-align: center;
+    color: 1e4b6b;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
