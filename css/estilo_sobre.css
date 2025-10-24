@@ -15,22 +15,11 @@ body {
 .hero{
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-
-.hero{
-    margin-left: 5%;
+     margin-left: 5%;
     margin-right: 5%;
     text-align: justify;
      font-family: 'Roboto', Arial, sans-serif;
-}
- .hero{
-    opacity: 0;
+      opacity: 0;
     animation: fadeIn 2s ease-in forwards;
   }
 
@@ -79,7 +68,7 @@ body {
     }
 
     header h1 {
-      font-size: 2.0rem;
+      font-size: 32px;
       color: #1e4b6b; 
       letter-spacing: 2px;
 
@@ -118,7 +107,7 @@ body {
 
     .social a {
       color: #fff;
-      font-size: 1.3rem;
+      font-size: 20px;
       transition: color 0.3s;
     }
 
@@ -172,6 +161,12 @@ footer{
 
 .titulo{
   text-align: center;
+}
+
+.exCortes{
+        align-items: center;
+    justify-content: center; 
+    text-align: center;
 }
 
     
