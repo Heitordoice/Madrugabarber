@@ -17,10 +17,10 @@
   
     <nav class="alt">
       <ul>
-        <li><a href="sobre_nos.html">Início</a></li>
+        <li><a href="sobre_nos.php">Início</a></li>
         <br>
         <br>
-        <li><a href="index.html">Login</a></li>
+        <li><a href="index.php">Login</a></li>
       </ul>
     </nav>
     

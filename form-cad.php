@@ -6,7 +6,7 @@
     <title>MadrugasBarber</title>
     <script src="scripts/main.js"></script>
     
-   
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
      <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
      <link rel="stylesheet" href="css/form.css">
      <link rel="stylesheet" href="css/estilo_sobre.css">
@@ -19,10 +19,10 @@
   
     <nav class="alt">
       <ul>
-        <li><a href="sobre_nos.html">Início</a></li>
+        <li><a href="sobre_nos.php">Início</a></li>
         <br>
         <br>
-        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="servicos.php">Serviços</a></li>
       </ul>
     </nav>
     
@@ -34,17 +34,22 @@
     </a>
     </div>
   </header>
+
   <hgroup>
     <h1>Login</h1>
   </hgroup>
   <div class="form">
 
-     <form action="logar.php" method="post" >
-    <input type="text" name="login" maxlength="100" required placeholder="Login"><br>
-    <input type="password" name="senha" required maxlength="100" placeholder="Senha"><br><br>
-    <input type="submit" value="Login" style="width: 200px; border-radius: 15px;">
+    <form action="cad-func.php" method="post" >
+    <input type="text" name="nome_func" maxlength="100" required placeholder="Nome"><br>
+    <input type="email" name="email_func" maxlength="100" required placeholder="Email"><br>
+    <input type="text" name="telefone_func" maxlength="11" required placeholder="Telefone"><br>
+    <input type="password" name="senha_func" maxlength="100" required placeholder="Senha"><br><br>
+    <input type="submit" value="Cadastrar" style="width: 200px; border-radius: 15px;"><br>
+    <input type="reset" value="Limpar" style="width: 200px; border-radius: 15px"><br>
     </form>
-    <a href="form-cad.html">Cadastrar</a>
+    <a href="index.php">Voltar</a>
+
   </div>
 
   <footer class="forms">

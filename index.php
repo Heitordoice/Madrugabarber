@@ -6,7 +6,7 @@
     <title>MadrugasBarber</title>
     <script src="scripts/main.js"></script>
     
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+   
      <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
      <link rel="stylesheet" href="css/form.css">
      <link rel="stylesheet" href="css/estilo_sobre.css">
@@ -19,10 +19,10 @@
   
     <nav class="alt">
       <ul>
-        <li><a href="sobre_nos.html">Início</a></li>
+        <li><a href="sobre_nos.php">Início</a></li>
         <br>
         <br>
-        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="servicos.php">Serviços</a></li>
       </ul>
     </nav>
     
@@ -34,23 +34,17 @@
     </a>
     </div>
   </header>
-
   <hgroup>
     <h1>Login</h1>
   </hgroup>
   <div class="form">
 
-    <form action="cad-user.php" method="post" style="display:inline;">
-    <input type="text" name="nome" maxlength="100" required placeholder="Nome"><br>
-    <input type="email" name="email" maxlength="100" required placeholder="Email"><br>
-    <input type="text" name="telefone" maxlength="11" required placeholder="Telefone"><br>
-    <input type="password" name="senha" maxlength="100" required placeholder="Senha"><br>
-    <input type="password" name="csenha" maxlength="100" required placeholder="Confirme sua senha"><br><br>
-    <input type="submit" value="Cadastrar" style="width: 200px; border-radius: 15px;"><br>
-    <input type="reset" value="Limpar" style="width: 200px; border-radius: 15px"><br>
+     <form action="logar.php" method="post" >
+    <input type="email" name="email_func"maxlength="100" required placeholder="Email"><br>
+    <input type="password" name="senha_func" required maxlength="100" placeholder="Senha"><br><br>
+    <input type="submit" value="Login" style="width: 200px; border-radius: 15px;">
     </form>
-    <a href="index.html">Voltar</a>
-
+    <a href="form-cad.php">Cadastrar</a>
   </div>
 
   <footer class="forms">

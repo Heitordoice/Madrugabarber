@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadrugasBarber</title>
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="css/estilo_sobre.css">
+   
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+     <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+
+   
+</head>
+
+  <header>  
+    <img src="imagens/logo.png" alt="" class="logo-madruga">
+    <h1>Madruga's Barber</h1>
+  
+    <nav class="alt">
+      <ul>
+        <li><a href="index.php">Login</a></li>
+        <br>
+        <br>
+        <li><a href="servicos.php">Serviços</a></li>
+      </ul>
+    </nav>
+    
+    <div class="social">
+
+       <a href="https://www.instagram.com/madrugasbarber/" class="instagram">
+      
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
+    </div>
+  </header>
+
+    <div class="hero">   
+      <h1 class = "titulo"> Sobre Nós</h1>
+
+      <h2 class="mission">
+
+        <p>
+            A Madruga's Barber é um empreendimento localizado no Golden Square Shopping em São Bernardo do Campo, idealizado por cinco sócios com foco em excelência no atendimento masculino.              
+ O negócio oferece serviços de corte de cabelo, barba, estética masculina e venda de produtos, com ambiente moderno, limpo e acolhedor. 
+ Ambiente bem organizado, a barbearia tem como objetivo conquistar uma base sólida de clientes fidelizados e, em longo prazo, se tornar referência no setor, com potencial de expansão por meio do modelo de franquias. 
+        </p>
+      <br>
+
+<h1 class = "titulo">
+Missão Visão e Valores
+</h1>
+
+
+<h2 class = "mission">
+<li>
+<h3>Missão</h3>
+Sempre ter um local conhecido por sua limpeza, autoestima e qualidade, mantendo um preço justo, mas ideal pela nossa competência. 
+</li>
+<br>
+<br>
+
+<div class = "visão">
+<li>
+<h3>Visão</h3> 
+Ser reconhecida como a melhor barbearia de São Bernardo do Campo e poder, 
+a longo prazo, 
+transformar o nosso negócio em uma rede de franquias. 
+</li>
+</div>
+<br>
+<div class="exCortes">
+ 
+    <h3>Exemplo de Cortes</h3>
+  
+  <img src="imagens/cortes.png" alt="">
+</div>
+<br>
+<footer>
+        <p class="fo">&copy; 2024 Madruga's Barber. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
