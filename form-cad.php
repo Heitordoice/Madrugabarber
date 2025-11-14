@@ -44,6 +44,9 @@
     <input type="text" name="nome_func" maxlength="100" required placeholder="Nome"><br>
     <input type="email" name="email_func" maxlength="100" required placeholder="Email"><br>
     <input type="text" name="telefone_func" maxlength="11" required placeholder="Telefone"><br>
+    <input type="text" name="status_func" maxlenght="8" placeholder="Estado civil (Casado/Solteiro)"><br>
+    <input type="text" name="endereço_func" maxlength="200" required placeholder="Endereço"><br>
+    <input type="text" name="sexo_func" maxlength="1" placeholder="Sexo (F = Feminino / M = Masculino)"><br>
     <input type="password" name="senha_func" maxlength="100" required placeholder="Senha"><br><br>
     <input type="submit" value="Cadastrar" style="width: 200px; border-radius: 15px;"><br>
     <input type="reset" value="Limpar" style="width: 200px; border-radius: 15px"><br>
