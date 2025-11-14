@@ -29,7 +29,7 @@
         $stmt->bindParam(7,$senha);
         //Executando o insert
         $stmt->execute();
-        header("Location: form-cad.php");
+        header("Location: index.php");
         die();
     }catch(PDOexception $e){
         echo "ERROR: ".$e->getMessage();
