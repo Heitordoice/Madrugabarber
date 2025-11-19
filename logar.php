@@ -4,28 +4,43 @@
         header('Location:index.php');
         die();
     }
-    $email=$_POST['email_func'];
-    $senha=$_POST['senha_func'];
-    try{
-        /* Consultando o banco de dados para efetuar o login e senha
-        $consulta=$conn->query("select * from usuario where login_user='".$login."' && senha_user='".$senha."';");*/
-        $consulta=$conn->prepare("select nome_func, senha_func from funcionarios where email_func=:email_func && senha_func=:senha_func;");
-        $consulta->bindParam(':email_func',$email);
-        $consulta->bindParam(':senha_func',$senha);
+    $email = filter_input(INPUT_POST, 'email_func', FILTER_SANITIZE_EMAIL);
+    $senha = $_POST['senha_func'];
+
+    try {
+        // Seleciona também o cod_func para setar na sessão
+        $consulta = $conn->prepare("SELECT cod_func, nome_func, senha_func FROM funcionarios WHERE email_func = :email_func LIMIT 1;");
+        $consulta->bindParam(':email_func', $email);
         $consulta->execute();
-        //contando o número de respostas
-        $quant=$consulta->rowCount();
-        if($quant!=1){
+
+        if ($consulta->rowCount() !== 1) {
             header('Location:index.php');
             die();
         }
-        $data=$consulta->fetch(PDO::FETCH_OBJ);
-        //echo $data->nome_user;
+
+        $data = $consulta->fetch(PDO::FETCH_OBJ);
+
+        // Se as senhas foram armazenadas com hash, use password_verify. Caso contrário, aceita string igual.
+        $password_ok = false;
+        if (isset($data->senha_func) && password_verify($senha, $data->senha_func)) {
+            $password_ok = true;
+        } elseif ($senha === $data->senha_func) {
+            $password_ok = true; // fallback caso senha esteja em texto plano no BD
+        }
+
+        if (!$password_ok) {
+            header('Location:index.php');
+            die();
+        }
+
         session_start();
-        $_SESSION['usuario']['id']=$data->cod_func;
-        $_SESSION['usuario']['nome']=$data->nome_func;
+        $_SESSION['usuario']['id'] = $data->cod_func;
+        $_SESSION['usuario']['nome'] = $data->nome_func;
         header('Location:sobre_nos.php');
-    }catch(PDOException $e){
-        echo "Erro:".$e->getMessage();
+        die();
+    } catch (PDOException $e) {
+        // Não exibir erro completo em produção
+        header('Location:index.php');
+        die();
     }
 ?>

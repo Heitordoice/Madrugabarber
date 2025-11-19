@@ -1,9 +1,19 @@
-form > *{
+form > * {
     border: 0;
-    width: 600px;
-    height: 20px;
-    text-align: center;
-    background-color: #d9d9d9;
+    width: 100%;
+    max-width: 600px;
+    height: 40px;
+    padding: 10px 14px;
+    text-align: left;
+    background-color: #f2f4f6;
+    border-radius: 8px;
+    margin: 8px auto;
+    box-sizing: border-box;
+}
+
+form > *:focus {
+    outline: 2px solid rgba(30,75,107,0.12);
+    background-color: #fff;
 }
 
 div.form{

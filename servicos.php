@@ -6,6 +6,7 @@
     <title>MadrugasBarber</title>
     <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="css/estilo_sobre.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
      <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
 </head>
@@ -32,9 +33,30 @@
     </a>
     </div>
   </header>
-  <main>
+  <main class="container">
+    <section class="servicos">
+      <h1 class="titulo">Nossos Serviços</h1>
+      <p class="mission">Cortes, barba, estética masculina e produtos com qualidade e atendimento personalizado.</p>
 
+      <div class="services">
+        <article class="card">
+          <h3>Corte Tradicional</h3>
+          <p>Acabamento clássico, ideal para quem busca um corte elegante e duradouro.</p>
+        </article>
+
+        <article class="card">
+          <h3>Barba & Design</h3>
+          <p>Modelagem da barba com toalha, navalha e produtos de qualidade.</p>
+        </article>
+
+        <article class="card">
+          <h3>Estética Masculina</h3>
+          <p>Tratamentos para pele e sobrancelhas, cuidados que valorizam o visual.</p>
+        </article>
+      </div>
+    </section>
   </main>
+
   <footer>
         <p>&copy; 2024 Madruga's Barber. Todos os direitos reservados.</p>
     </footer>
