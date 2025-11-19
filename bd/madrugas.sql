@@ -23,7 +23,7 @@ valor_prod decimal(10,2) check(valor_prod >= 0)
 );
 
 create table servicos(
-cod_serv int not null primary key,
+cod_serv int auto_increment primary key,
 nome_serv varchar(100) not null,
 valor_serv decimal (10,2) not null check(valor_serv >=0)
 );
@@ -41,7 +41,7 @@ senha_func varchar(100) not null
 );
 
 create table fornecedores(
-cod_forn int not null primary key,
+cod_forn int auto_increment primary key,
 nome_forn varchar(100) not null,
 telefone_forn char (20) not null unique,
 email_forn varchar(100) not null unique,
@@ -49,13 +49,13 @@ endereco_forn varchar(200) not null
 );
 
 create table saida(
-cod_sai int not null primary key,
+cod_sai int auto_increment primary key,
 descricao_sai varchar (255),
 valor_sai decimal (10,2) check(valor_sai >=0 )
 );
 
 create table caixa(
-cod_caixa int not null primary key,
+cod_caixa int auto_increment primary key,
 cod_serv int not null,
 cod_sai int not null,
 cod_func int not null,
@@ -69,7 +69,7 @@ foreign key (cod_func) references funcionarios (cod_func)
 );
 
 create table movimentacao_estoque(
-cod_movi int not null primary key,
+cod_movi int auto_increment primary key,
 cod_prod int not null,
 tipo varchar(25) not null,
 quantidade int not null,
@@ -77,7 +77,6 @@ data_movimentacao datetime default now(),
 saldo decimal(10,2) check(saldo >= 0),
 foreign key (cod_prod) references produtos (cod_prod)
 );
-
 
 
 
