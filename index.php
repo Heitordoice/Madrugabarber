@@ -27,7 +27,7 @@
         // mostrar link para agenda apenas se usuário logado
         if (session_status() === PHP_SESSION_NONE) session_start();
         if (!empty($_SESSION['usuario']['id'])): ?>
-          <li><a href="agenda.php">Agenda</a></li>
+          <li><a href="agendamento.php">Agenda</a></li>
         <?php endif; ?>
       </ul>
     </nav>
