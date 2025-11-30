@@ -23,6 +23,12 @@
         <br>
         <br>
         <li><a href="servicos.php">Serviços</a></li>
+        <?php
+        // mostrar link para agenda apenas se usuário logado
+        if (session_status() === PHP_SESSION_NONE) session_start();
+        if (!empty($_SESSION['usuario']['id'])): ?>
+          <li><a href="agenda.php">Agenda</a></li>
+        <?php endif; ?>
       </ul>
     </nav>
     
@@ -38,13 +44,17 @@
     <h1>Login</h1>
   </hgroup>
   <div class="form">
-
-     <form action="logar.php" method="post" >
-    <input type="email" name="email_func"maxlength="100" required placeholder="Email"><br>
-    <input type="password" name="senha_func" required maxlength="100" placeholder="Senha"><br><br>
-    <input type="submit" value="Login" style="width: 200px; border-radius: 15px;">
-    </form>
-    <a href="form-cad.php">Cadastrar</a>
+    <?php if (!empty($_SESSION['usuario']['id'])): ?>
+      <p>Bem-vindo, <strong><?php echo htmlspecialchars($_SESSION['usuario']['nome']); ?></strong></p>
+      <p><a href="agenda.php">Ir para Agenda</a> | <a href="logout.php">Logout</a></p>
+    <?php else: ?>
+      <form action="logar.php" method="post" >
+        <input type="email" name="email_func" maxlength="100" required placeholder="Email"><br>
+        <input type="password" name="senha_func" required maxlength="100" placeholder="Senha"><br><br>
+        <input type="submit" value="Login" style="width: 200px; border-radius: 15px;">
+      </form>
+      <a href="form-cad.php">Cadastrar</a>
+    <?php endif; ?>
   </div>
 
   <footer class="forms">
