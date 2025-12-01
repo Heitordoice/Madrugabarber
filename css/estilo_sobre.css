@@ -209,6 +209,42 @@ footer{
 
 }
 
+
+:root{font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+
+body{margin:0;background:#f6f7fb;color:#222;padding:18px}
+
+.container{max-width:1100px;margin:0 auto;background:#fff;padding:18px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+
+.flex{display:flex;gap:16px}
+
+.col{flex:1}
+
+.sidebar{flex-basis:320px}
+
+.card{background:#fff;padding:12px;border-radius:8px;border:1px solid #efefef;margin-bottom:12px}
+
+table{width:100%;border-collapse:collapse}
+
+th,td{border:1px solid #eee;padding:6px;text-align:center;vertical-align:top}
+
+.time{font-size:13px;color:#666;font-weight:600}
+
+.slot{padding:6px;border-radius:6px;margin-bottom:6px;font-size:13px}
+
+.free{background:#f2f8ff;color:#0a47a1;border:1px dashed #cfe0ff;cursor:pointer}
+
+.busy{background:#ffecec;color:#8a1f1f;border:1px solid #ffd1d1}
+
+label{display:block;margin-bottom:4px;font-weight:600}
+
+input,select{width:100%;padding:8px;border-radius:6px;border:1px solid #ddd}
+
+button{background:#b34fa8;color:#fff;padding:10px;border:none;border-radius:6px;cursor:pointer}@media(max-width:900px){.flex{flex-direction:column}}
+
+
+
+
 /* pequenas mídias */
 @media (max-width: 720px) {
   header { padding: 12px 18px; }

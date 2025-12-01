@@ -38,6 +38,8 @@
       <h1 class="titulo">Nossos Serviços</h1>
       <p class="mission">Cortes, barba, estética masculina e produtos com qualidade e atendimento personalizado.</p>
 
+      <img src="cortes.png" alt="">
+
       <div class="services">
         <article class="card">
           <h3>Corte Tradicional</h3>
@@ -54,6 +56,10 @@
           <p>Tratamentos para pele e sobrancelhas, cuidados que valorizam o visual.</p>
         </article>
       </div>
+    </section>
+    <section class="exCortes">
+      <h3>Exemplo de Cortes</h3>
+      <img src="imagens/cortes.png" alt="Exemplo de cortes">
     </section>
   </main>
 

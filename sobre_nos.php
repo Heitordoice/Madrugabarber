@@ -58,10 +58,7 @@
       </article>
     </section>
 
-    <section class="exCortes">
-      <h3>Exemplo de Cortes</h3>
-      <img src="imagens/cortes.png" alt="Exemplo de cortes">
-    </section>
+    
   </main>
 
   <footer>

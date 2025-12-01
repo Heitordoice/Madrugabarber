@@ -78,5 +78,17 @@ saldo decimal(10,2) check(saldo >= 0),
 foreign key (cod_prod) references produtos (cod_prod)
 );
 
+create table agendamentos(
+cod_cli int not null,
+cod_serv int not null,
+data_agendamento date not null,
+hora_agendamento time not null,
+estatus varchar(20) default 'pendente',
+criado_em timestamp default current_timestamp,
+foreign key (cod_cli) references clientes (cod_cli),
+foreign key (cod_serv) references servicos (cod_serv)
+);
+
+
 
 
