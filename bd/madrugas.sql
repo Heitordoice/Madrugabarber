@@ -28,6 +28,16 @@ nome_serv varchar(100) not null,
 valor_serv decimal (10,2) not null check(valor_serv >=0)
 );
 
+create table agendamentos(
+cod_cli int not null,
+cod_serv int not null,
+data_agendamento date not null,
+hora_agendamento time not null,
+estatus varchar(20) default 'pendente',
+criado_em timestamp default current_timestamp,
+foreign key (cod_cli) references clientes (cod_cli),
+foreign key (cod_serv) references servicos (cod_serv)
+);
 create table funcionarios(
 cod_func int auto_increment primary key,
 nome_func varchar(100) not null,

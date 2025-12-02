@@ -2,7 +2,7 @@
 include __DIR__.'/connection.php';
 
 if (!isset($_POST['cod_cli'], $_POST['cod_serv'], $_POST['data_agendamento'], $_POST['hora_agendamento'])) {
-    echo "<h3 style='color:red;'>Dados incompletos.</h3><a href='agenda.php'>Voltar</a>";
+    header("Location: agenda.php?status=invalid", true, 303);
     exit;
 }
 
@@ -12,7 +12,7 @@ $data = filter_input(INPUT_POST, 'data_agendamento', FILTER_SANITIZE_STRING);
 $hora = filter_input(INPUT_POST, 'hora_agendamento', FILTER_SANITIZE_STRING);
 
 if ($cod_cli === false || $cod_serv === false || empty($data) || empty($hora)) {
-    echo "<h3 style='color:red;'>Dados inválidos.</h3><a href='agenda.php'>Voltar</a>";
+    header("Location: agenda.php?status=invalid", true, 303);
     exit;
 }
 
@@ -25,7 +25,7 @@ try {
     $stmt->execute();
 
     if ($stmt->rowCount() > 0) {
-        echo "<h3 style='color:red;'>Este horário já está ocupado.</h3><a href='agenda.php'>Voltar</a>";
+        header("Location: agenda.php?status=occupied", true, 303);
         exit;
     }
 
@@ -38,13 +38,16 @@ try {
     $stmt->bindParam(':hora', $hora);
 
     if ($stmt->execute()) {
-        echo "<h3 style='color:green;'>Agendamento realizado com sucesso!</h3>";
+        header("Location: agenda.php?status=success", true, 303);
+        exit;
     } else {
-        echo "<h3 style='color:red;'>Erro ao agendar.</h3>";
+        header("Location: agenda.php?status=error", true, 303);
+        exit;
     }
 } catch (PDOException $e) {
     // Não expor erros sensíveis em produção
-    echo "<h3 style='color:red;'>Erro no servidor. Tente novamente.</h3>";
+    header("Location: agenda.php?status=error", true, 303);
+    exit;
 }
 
 echo "<br><a href='agenda.php'>Voltar</a>";
